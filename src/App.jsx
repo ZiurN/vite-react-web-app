@@ -29,7 +29,7 @@ function App() {
         <reactNavigate.Routes>
         <reactNavigate.Route path="/" element={<pages.Home />} />
         <reactNavigate.Route path="/about-me" element={<pages.AboutMe />} />
-        <reactNavigate.Route path="/cv" element={<pages.Cv />} />
+        <reactNavigate.Route path="/curriculum" element={<pages.Cv />} />
         <reactNavigate.Route path="/design-projects" element={<pages.DesignProjects />} />
         <reactNavigate.Route path="/web-projects" element={<pages.WebProjects />} />
         <reactNavigate.Route path="/blog" element={<pages.Blog />} />
