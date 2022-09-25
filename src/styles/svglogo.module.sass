@@ -1,0 +1,42 @@
+@import '_variables'
+@import '_mixing'
+@keyframes rotation
+    from
+        transform: rotate(0deg)
+    50%
+        transform: rotate(180deg)
+    to
+        transform: rotate(359deg)
+@keyframes hub
+    from
+        transform: rotate(0deg) scale(1)
+    25%
+        transform: rotate(35deg) scale(1.1)
+    50%
+        transform: rotate(0deg) scale(0.9)
+    75%
+        transform: rotate(-10deg) scale(0.9)
+    to
+        transform: rotate(0deg) scale(1)
+.logoSvg
+    width: 10vw
+    height: 10vh
+.blue
+    fill: $mainBlue
+.svgLogoCenter
+    transform-origin: center
+    animation: rotation 3s ease infinite
+    +transitionAll(0.5s)
+.svgLogoBorder
+    transform-origin: center
+    animation: hub 7s ease infinite
+    +transitionAll(0.5s)
+// @media screen and (max-width: 640px)
+
+// @media screen and (min-width: 640px)
+
+// @media screen and (min-width: 768px)
+
+// @media screen and (min-width: 1024px)
+
+// @media screen and (min-width: 1280px)
