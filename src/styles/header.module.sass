@@ -1,60 +1,59 @@
 @import '_variables'
 @import '_normalize'
-@media only screen and (min-width: 1280px)
-    li
-        display: block
-    .header
-        background-color: white
-    .headerList
-        display: flex
+li
+    display: block
+.header
+    background-color: white
+.headerList
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin: 1rem 3rem
+.logoContainer
+    width: 3rem
+    .logo
+        width: 100%
+.title
+    color: $mainBlue
+    font-size: 1.5rem
+.languageSelectorContainer, .languageSelected, .languageOption
+    display: flex
+.languageSelectorContainer
+    flex-direction: column
+    align-items: center
+    .languageSelected, .languageOption
         flex-direction: row
-        justify-content: space-between
-        align-items: center
-        margin: 1rem 3rem
-    .logoContainer
+    .languageSelected
+        cursor: pointer
+        height: 3rem
         width: 3rem
-        .logo
-            width: 100%
-    .title
-        color: $mainBlue
-        font-size: 1.5rem
-    .languageSelectorContainer, .languageSelected, .languageOption
-        display: flex
-    .languageSelectorContainer
-        flex-direction: column
-        align-items: center
-        .languageSelected, .languageOption
-            flex-direction: row
-        .languageSelected
+    .languageOptions
+        position: relative
+        .languageOptionsContainer
+            position: absolute
+            top: 0
+            right: -1.5rem
+            transition: all 0.3s
+            overflow: hidden
+        .languageOption
             cursor: pointer
+            justify-content: space-between
+            background-color: white
+            padding: 0 0 0 0.9rem
+        .languageOption:hover
+            background-color: $mainBlue
+            color: white
+        .languageOption:nth-child(1)
+            border-top: 1px solid $mainBlue
+            border-bottom: 1px solid $mainBlue
+        .languageOption:nth-child(2n)
+            border-bottom: 1px solid $mainBlue
+        .languageOption:nth-child(2n+1)
+            border-top: 1px solid $mainBlue
+        .languageOptionImage
             height: 3rem
             width: 3rem
-        .languageOptions
-            position: relative
-            .languageOptionsContainer
-                position: absolute
-                top: 0
-                right: -1.5rem
-                transition: all 0.3s
-                overflow: hidden
-            .languageOption
-                cursor: pointer
-                justify-content: space-between
-                background-color: white
-                padding: 0 0 0 0.9rem
-            .languageOption:hover
-                background-color: $mainBlue
-                color: white
-            .languageOption:nth-child(1)
-                border-top: 1px solid $mainBlue
-                border-bottom: 1px solid $mainBlue
-            .languageOption:nth-child(2n)
-                border-bottom: 1px solid $mainBlue
-            .languageOption:nth-child(2n+1)
-                border-top: 1px solid $mainBlue
-            .languageOptionImage
-                height: 3rem
-                width: 3rem
 @media only screen and (max-width: 1280px)
 
 @media only screen and (max-width: 1024px)
