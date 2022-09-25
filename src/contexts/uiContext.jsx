@@ -13,6 +13,7 @@ import NotFound from '../pages/notFound';
 import ZiurLogo from '../components/ziurLogo';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import NavMenu from '../components/navMenu';
 
 const UiContext = createContext();
 
@@ -31,7 +32,8 @@ const UiContextProvider = ({ children }) => {
     components: {
       ZiurLogo,
 	  Header,
-	  Footer
+	  Footer,
+	  NavMenu
     },
     reactNavigate: {
       Route,

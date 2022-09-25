@@ -25,6 +25,7 @@ function App() {
   return (
     <div className={classes} >
       <components.Header title={pageTitle}></components.Header>
+      <components.NavMenu />
       {langCtx.languageCharged &&
         <reactNavigate.Routes>
         <reactNavigate.Route path="/" element={<pages.Home />} />
