@@ -5,10 +5,12 @@ const LangContext = createContext();
 const LangContextProvider = ({ children }) => {
   const [lang, setLang] = useState('EN');
   const [languageCharged, setLanguageCharged] = useState(true);
-  const setLanguage = () => {
+  const setLanguage = (language) => {
+	setLanguageCharged(false);
+	setLang(language);
 	setTimeout(() =>{
-		//setLanguageCharged(true);
-	}, 1000)
+		setLanguageCharged(true);
+	}, 1000);
   }
   const contextValue = {
     languageCharged,

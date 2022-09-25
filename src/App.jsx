@@ -20,30 +20,28 @@ function App() {
     document.title = title;
     setPageTitle(title);
   }, [location]);
-  langCtx.setLanguage();
-  if (!langCtx.languageCharged) {
-    return (
-      <div className="spinner">
+  let classes = "appContainer";
+  classes = !langCtx.languageCharged ? classes + " spinner": classes;
+  return (
+    <div className={classes} >
+      <components.Header title={pageTitle}></components.Header>
+      {langCtx.languageCharged &&
+        <reactNavigate.Routes>
+        <reactNavigate.Route path="/" element={<pages.Home />} />
+        <reactNavigate.Route path="/about-me" element={<pages.AboutMe />} />
+        <reactNavigate.Route path="/cv" element={<pages.Cv />} />
+        <reactNavigate.Route path="/design-projects" element={<pages.DesignProjects />} />
+        <reactNavigate.Route path="/web-projects" element={<pages.WebProjects />} />
+        <reactNavigate.Route path="/blog" element={<pages.Blog />} />
+        <reactNavigate.Route path="/photography" element={<pages.Photography />} />
+        <reactNavigate.Route path="*" element={<pages.NotFound />} />
+        </reactNavigate.Routes>
+      }
+      {!langCtx.languageCharged &&
         <components.ZiurLogo></components.ZiurLogo>
-      </div>
-    );
-  } else {
-    return (
-      <div className="appContainer">
-		<components.Header title={pageTitle}></components.Header>
-			<reactNavigate.Routes>
-			<reactNavigate.Route path="/" element={<pages.Home />} />
-			<reactNavigate.Route path="/about-me" element={<pages.AboutMe />} />
-			<reactNavigate.Route path="/cv" element={<pages.Cv />} />
-			<reactNavigate.Route path="/design-projects" element={<pages.DesignProjects />} />
-			<reactNavigate.Route path="/web-projects" element={<pages.WebProjects />} />
-			<reactNavigate.Route path="/blog" element={<pages.Blog />} />
-			<reactNavigate.Route path="/photography" element={<pages.Photography />} />
-			<reactNavigate.Route path="*" element={<pages.NotFound />} />
-			</reactNavigate.Routes>
-		<components.Footer></components.Footer>
-      </div>
-    );
-  }
+      }
+      <components.Footer></components.Footer>
+    </div>
+  );
 }
 export default App;

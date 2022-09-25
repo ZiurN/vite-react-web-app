@@ -1,5 +1,6 @@
 import styles from '../styles/header.module.sass';
 import ziurLogo from '../assets/ziurfreelance.svg';
+import LanguageSelector from './languageSelector';
 
 function Header({title}) {
   return (
@@ -11,7 +12,9 @@ function Header({title}) {
           </a>
         </li>
         <li className={`${styles.title}`}>{title}</li>
-        <li>Lang Selector</li>
+        <li>
+          <LanguageSelector />
+        </li>
       </ul>
     </header>
   );

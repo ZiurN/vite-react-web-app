@@ -1,19 +1,21 @@
 @import '_variables'
 @import '_normalize'
+@media only screen and (min-width: 1280px)
+    .appContainer
+        background: lightgrey
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100vh
+    .spinner
+        .spinnerContainer
+            height: 100%
+            margin: auto
+            display: flex
+            justify-content: center
+            align-items: center
 @media only screen and (max-width: 1280px)
-.spinner
-    margin: auto
-    width: 90vw
-    height: 90vh
-    display: flex
-    display: flex
-    justify-content: center
-    align-items: center
-.appContainer
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    height: 100vh
+
 @media only screen and (max-width: 1024px)
 
 @media only screen and (max-width: 768px)
