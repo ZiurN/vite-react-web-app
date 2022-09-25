@@ -1,13 +1,20 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { LangContext } from "../contexts/langContext";
+import { clickOutsideHandler } from '../hooks/clickOutsideHandler';
 import styles from '../styles/header.module.sass';
 import spainLogo from '../assets/spain.svg';
 import englishLogo from '../assets/english.svg';
 
 function LanguageSelector () {
   const [languageSelected, setlanguageSelected] = useState(englishLogo);
+  const [menuOpened, setMenuOpened] = useState(false);
   const [height, setHeight] = useState(0);
   const langCtx = useContext(LangContext);
+  const {childRef, clickOutsiteToggle} = clickOutsideHandler(true);
+  useEffect(() => {
+    console.log(menuOpened);
+    if (menuOpened) showOptions();
+  }, [clickOutsiteToggle]);
   const setLanguage = (language) => {
     if (language === 'ES') setlanguageSelected(spainLogo);
     if (language === 'EN') setlanguageSelected(englishLogo);
@@ -15,15 +22,20 @@ function LanguageSelector () {
     showOptions();
   }
   const showOptions = () => {
-    if (height === 0) setHeight('7rem');
-    else setHeight(0);
+    let toggle = menuOpened;
+    if (toggle) {
+      setHeight(0);
+    } else {
+      setHeight('7rem');
+    }
+    setMenuOpened(!toggle);
   }
-	return (
-		<div className={`${styles.languageSelectorContainer}`}>
+  return (
+    <div className={`${styles.languageSelectorContainer}`} ref={childRef}>
       <div className={styles.languageSelected} onClick={() => showOptions()}>
         <img src={languageSelected} alt={langCtx.lang} />
       </div>
-      <div className={`${styles.languageOptions}`}>
+      <div className={`${styles.languageOptions}`} >
         <div className={`${styles.languageOptionsContainer}`} style={{height: height}}>
           <div className={`${styles.languageOption}`} onClick={() => setLanguage('EN')}>
             <div>
@@ -38,8 +50,8 @@ function LanguageSelector () {
             <img className={`${styles.languageOptionImage}`} src={spainLogo} alt="Español" />
           </div>
         </div>
-		  </div>
+      </div>
     </div>
-	);
+  );
 }
 export default LanguageSelector;
