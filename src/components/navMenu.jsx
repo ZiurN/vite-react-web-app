@@ -30,7 +30,6 @@ function NavMenu () {
         <NavMenuComponent styles={styles} label="Web Projects" route="/web-projects" goToPage={goToPage} />
         <NavMenuComponent styles={styles} label="Photography" route="/photography" goToPage={goToPage} />
         <NavMenuComponent styles={styles} label="Curriculum" route="/curriculum" goToPage={goToPage} />
-        <NavMenuComponent styles={styles} label="Curriculum" route="/curriculum" goToPage={goToPage} />
         <NavMenuComponent styles={styles} label="Design Projects" route="/design-projects" goToPage={goToPage} />
         <NavMenuComponent styles={styles} label="Blog" route="/blog" goToPage={goToPage} />
         <NavMenuComponent styles={styles} label="About Me" route="/about-me" goToPage={goToPage} />

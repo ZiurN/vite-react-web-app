@@ -13,22 +13,22 @@ function Footer() {
       <nav>
         <ul className={`${styles.logos}`} >
           <li className={`${styles.logoContainer}`}>
-            <a href="">
+            <a href="https://github.com/ZiurN" target="_blank">
               <img className={`${styles.logo}`} src={githubLogo} />
             </a>
           </li>
           <li className={`${styles.logoContainer}`}>
-            <a href="">
+            <a href="https://www.linkedin.com/in/jeferson-ruiz-5138b414a/" target="_blank">
               <img className={`${styles.logo}`} src={linkedInLogo} />
             </a>
           </li>
           <li className={`${styles.logoContainer}`}>
-            <a href="">
+            <a href="https://www.behance.net/ziurfreelance" target="_blank">
               <img className={`${styles.logo}`} src={behanceLogo} />
             </a>
           </li>
           <li className={`${styles.logoContainer}`}>
-            <a href="">
+            <a href="mailto:jefryruiz@gmail.com" target="_blank">
               <img className={`${styles.logo}`} src={emailLogo} />
             </a>
           </li>

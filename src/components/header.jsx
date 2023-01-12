@@ -7,7 +7,7 @@ function Header({title}) {
     <header className={`${styles.header}`} >
       <ul className={`${styles.headerList}`}>
         <li className={`${styles.logoContainer}`}>
-		      <a href="">
+		      <a href="/">
             <img className={`${styles.logo}`} src={ziurLogo} />
           </a>
         </li>
