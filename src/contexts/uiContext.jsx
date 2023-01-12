@@ -31,9 +31,9 @@ const UiContextProvider = ({ children }) => {
     },
     components: {
       ZiurLogo,
-	  Header,
-	  Footer,
-	  NavMenu
+      Header,
+      Footer,
+      NavMenu
     },
     reactNavigate: {
       Route,
