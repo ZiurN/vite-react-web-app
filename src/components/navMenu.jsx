@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from '../styles/navMenu.module.sass';
 import menuArrowSymbol from '../assets/menuArrow.svg';
 import { clickOutsideHandler } from '../hooks/clickOutsideHandler';
+import NavMenuComponent from './navMenuComponent';
 
 function NavMenu () {
   const [isAvailable, setIsAvailable] = useState(styles.navMenuHidden);
@@ -25,30 +26,14 @@ function NavMenu () {
 	return (
 		<nav className={`${styles.navMenu} ${isAvailable}`} ref={childRef}>
 			<ul >
-        <li className={`${styles.navMenuOption}`} onClick={() => {goToPage("/web-projects")}}>
-          <p>Web Projects</p>
-          <div className={`${styles.navMenuOptionLine}`}></div>
-        </li>
-        <li className={`${styles.navMenuOption}`} onClick={() => {goToPage("/photography")}}>
-          <p>Photography</p>
-          <div className={`${styles.navMenuOptionLine}`}></div>
-        </li>
-        <li className={`${styles.navMenuOption}`} onClick={() => {goToPage("/curriculum")}}>
-          <p>Curriculum</p>
-          <div className={`${styles.navMenuOptionLine}`}></div>
-        </li>
-        <li className={`${styles.navMenuOption}`} onClick={() => {goToPage("/design-projects")}}>
-          <p>Design Projects</p>
-          <div className={`${styles.navMenuOptionLine}`}></div>
-        </li>
-        <li className={`${styles.navMenuOption}`} onClick={() => {goToPage("/blog")}}>
-          <p>Blog</p>
-          <div className={`${styles.navMenuOptionLine}`}></div>
-        </li>
-        <li className={`${styles.navMenuOption}`} onClick={() => {goToPage("/about-me")}}>
-          <p>About Me</p>
-          <div className={`${styles.navMenuOptionLine}`}></div>
-        </li>
+        <NavMenuComponent styles={styles} label="Salesforce" route="/salesforce" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="Web Projects" route="/web-projects" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="Photography" route="/photography" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="Curriculum" route="/curriculum" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="Curriculum" route="/curriculum" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="Design Projects" route="/design-projects" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="Blog" route="/blog" goToPage={goToPage} />
+        <NavMenuComponent styles={styles} label="About Me" route="/about-me" goToPage={goToPage} />
 			</ul>
       <div className={`${styles.toggleButtonContainer}`} onClick={() => showNavMenu()}>
         <img src={menuArrowSymbol} alt="Toggle Show Nav Menu" />
