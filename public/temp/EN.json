@@ -1,0 +1,14 @@
+{
+	"home": {
+		"header": "",
+		"title": "¡Hi!",
+		"content": [
+			"I am Jeferson, Salesforce expert, with experience in fullstack web development. Also I am a DevOps metodology and Automation enthusiastic",
+			"In this webpage you will find most of my work and experience not only related to Web and Cloud development but also related to visual and graphical design, and some of my personal interests and hobbies.",
+			"¡Welcome!"
+		]
+	},
+	"about_me": {
+		"header": "About Me"
+	}
+}

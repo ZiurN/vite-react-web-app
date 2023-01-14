@@ -11,7 +11,7 @@ function Header({title}) {
             <img className={`${styles.logo}`} src={ziurLogo} />
           </a>
         </li>
-        <li className={`${styles.title}`}>{title.toUpperCase()}</li>
+        <li className={`${styles.title}`}>{title}</li>
         <li>
           <LanguageSelector />
         </li>

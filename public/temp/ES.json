@@ -1,0 +1,14 @@
+{
+	"home": {
+		"header": "",
+		"title": "¡Hola!",
+		"content": [
+			"Soy Jeferson, experto en Salesforce, con experiencia en desarrollo web fullstack. También soy un entusiasta de la metodología DevOps y la automatización.",
+			"En este sitio encontrará la mayoria de mi trabajo y experiencia, no sólo en desarrollo Web y Cloud, sino también en diseño gráfico y visual, además de algunos de mis intereses personales y pasatiempos",
+			"¡Bienvenido/a!"
+		]
+	},
+	"about_me": {
+		"header": "Sobre Mi"
+	}
+}
