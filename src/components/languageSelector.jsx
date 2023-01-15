@@ -12,7 +12,6 @@ function LanguageSelector () {
   const langCtx = useContext(LangContext);
   const {childRef, clickOutsiteToggle} = clickOutsideHandler(true);
   useEffect(() => {
-    console.log(menuOpened);
     if (menuOpened) showOptions();
   }, [clickOutsiteToggle]);
   const setLanguage = (language) => {

@@ -10,7 +10,6 @@ function App() {
   const reactNavigate = uiCtx.reactNavigate;
   const pages = uiCtx.pages;
   const components = uiCtx.components;
-  const location = reactNavigate.useLocation();
   const setPageTitleInPage = (title) => {
 	title = title.length === 0 || title.includes("000")
       ? "Jeferson Ruiz"

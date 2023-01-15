@@ -8,7 +8,37 @@
 			"¡Bienvenido/a!"
 		]
 	},
+	"salesforce": {
+		"header": "Salesforce"
+	},
+	"web_projects": {
+		"header": "Proyectos Web"
+	},
+	"photography": {
+		"header": "Fotografía"
+	},
+	"curriculum": {
+		"header": "Curriculum"
+	},
+	"design_projects": {
+		"header": "Proyectos de Diseño"
+	},
+	"blog": {
+		"header": "Blog"
+	},
 	"about_me": {
-		"header": "Sobre Mi"
+		"header": "Sobre mi"
+	},
+	"not_found": {
+		"header": "Página no encontrada"
+	},
+	"nav_menu" : {
+		"salesforce": "Salesforce",
+		"web_projects": "Proyectos Web",
+		"photography": "Fotografía",
+		"curriculum": "Curriculum",
+		"design_projects": "Proyectos de Diseño",
+		"blog": "Blog",
+		"about_me": "Sobre mi"
 	}
 }

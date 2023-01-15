@@ -8,7 +8,37 @@
 			"¡Welcome!"
 		]
 	},
+	"salesforce": {
+		"header": "Salesforce"
+	},
+	"web_projects": {
+		"header": "Web Projects"
+	},
+	"photography": {
+		"header": "Photography"
+	},
+	"curriculum": {
+		"header": "Curriculum"
+	},
+	"design_projects": {
+		"header": "Design Projects"
+	},
+	"blog": {
+		"header": "Blog"
+	},
 	"about_me": {
 		"header": "About Me"
+	},
+	"not_found": {
+		"header": "Not Found"
+	},
+	"nav_menu" : {
+		"salesforce": "Salesforce",
+		"web_projects": "Web Projects",
+		"photography": "Photography",
+		"curriculum": "Curriculum",
+		"design_projects": "Design Projects",
+		"blog": "Blog",
+		"about_me": "About Me"
 	}
 }
