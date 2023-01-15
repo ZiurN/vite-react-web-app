@@ -8,6 +8,7 @@ import DesignProjects from '../pages/designProjects';
 import WebProjects from '../pages/webProjects';
 import Home from '../pages/home';
 import Photography from '../pages/photography';
+import Salesforce from '../pages/salesforce';
 import NotFound from '../pages/notFound';
 /** UI Custom Components */
 import ZiurLogo from '../components/ziurLogo';
@@ -27,6 +28,7 @@ const UiContextProvider = ({ children }) => {
       WebProjects,
       Home,
       Photography,
+	  Salesforce,
       NotFound
     },
     components: {

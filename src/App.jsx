@@ -32,7 +32,8 @@ function App() {
         <reactNavigate.Route path="/web-projects" element={<pages.WebProjects setPageTitle={setPageTitleInPage}/>} />
         <reactNavigate.Route path="/blog" element={<pages.Blog setPageTitle={setPageTitleInPage}/>} />
         <reactNavigate.Route path="/photography" element={<pages.Photography setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="*" element={<pages.NotFound />} />
+		<reactNavigate.Route path="/salesforce" element={<pages.Salesforce setPageTitle={setPageTitleInPage}/>} />
+        <reactNavigate.Route path="*" element={<pages.NotFound setPageTitle={setPageTitleInPage}/>} />
         </reactNavigate.Routes>
       }
       {!langCtx.languageCharged &&
