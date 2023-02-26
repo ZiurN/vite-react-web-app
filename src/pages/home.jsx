@@ -18,7 +18,6 @@ function Home() {
         {paragraphs}
       </div>
     </main>
-
   );
 }
 export default Home;

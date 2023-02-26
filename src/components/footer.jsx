@@ -3,6 +3,7 @@ import githubLogo from '../assets/github.svg';
 import linkedInLogo from '../assets/linkedin.svg';
 import behanceLogo from '../assets/behance.svg';
 import emailLogo from '../assets/email.svg';
+import trailheadLogo from '../assets/trailheadLogo.png';
 
 function Footer() {
   return (
@@ -30,6 +31,11 @@ function Footer() {
           <li className={`${styles.logoContainer}`}>
             <a href="mailto:jefryruiz@gmail.com" target="_blank">
               <img className={`${styles.logo}`} src={emailLogo} />
+            </a>
+          </li>
+		  <li className={`${styles.logoContainer}`}>
+            <a href="https://trailblazer.me/id/zorro8" target="_blank">
+              <img className={`${styles.logo}`} src={trailheadLogo} />
             </a>
           </li>
         </ul>

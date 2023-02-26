@@ -5,6 +5,12 @@ import "./styles/index.sass";
 
 function App() {
   const [pageTitle, setPageTitle] = useState('Jeferson Ruiz');
+  const [bgConfig, setBgConfig] = useState({
+    backgroundImage: "url(/bgs/bg_home.jpg)",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  });
   const uiCtx = useContext(UiContext);
   const langCtx = useContext(LangContext);
   const reactNavigate = uiCtx.reactNavigate;
@@ -20,26 +26,28 @@ function App() {
   let classes = "appContainer";
   classes = !langCtx.languageCharged ? classes + " spinner": classes;
   return (
-    <div className={classes} >
-      <components.Header title={pageTitle}></components.Header>
-      <components.NavMenu />
-      {langCtx.languageCharged &&
-        <reactNavigate.Routes>
-        <reactNavigate.Route path="/" element={<pages.Home />} />
-        <reactNavigate.Route path="/about-me" element={<pages.AboutMe setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="/curriculum" element={<pages.Cv setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="/design-projects" element={<pages.DesignProjects setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="/web-projects" element={<pages.WebProjects setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="/blog" element={<pages.Blog setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="/photography" element={<pages.Photography setPageTitle={setPageTitleInPage}/>} />
-		<reactNavigate.Route path="/salesforce" element={<pages.Salesforce setPageTitle={setPageTitleInPage}/>} />
-        <reactNavigate.Route path="*" element={<pages.NotFound setPageTitle={setPageTitleInPage}/>} />
-        </reactNavigate.Routes>
-      }
-      {!langCtx.languageCharged &&
-        <components.ZiurLogo></components.ZiurLogo>
-      }
-      <components.Footer></components.Footer>
+    <div style={bgConfig} >
+      <div className={classes} >
+        <components.Header title={pageTitle}></components.Header>
+        <components.NavMenu />
+        {langCtx.languageCharged &&
+          <reactNavigate.Routes>
+          <reactNavigate.Route path="/" element={<pages.Home />} />
+          <reactNavigate.Route path="/about-me" element={<pages.AboutMe setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="/curriculum" element={<pages.Cv setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="/design-projects" element={<pages.DesignProjects setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="/web-projects" element={<pages.WebProjects setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="/blog" element={<pages.Blog setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="/photography" element={<pages.Photography setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="/salesforce" element={<pages.Salesforce setPageTitle={setPageTitleInPage}/>} />
+          <reactNavigate.Route path="*" element={<pages.NotFound setPageTitle={setPageTitleInPage}/>} />
+          </reactNavigate.Routes>
+        }
+        {!langCtx.languageCharged &&
+          <components.ZiurLogo></components.ZiurLogo>
+        }
+        <components.Footer></components.Footer>
+      </div>
     </div>
   );
 }

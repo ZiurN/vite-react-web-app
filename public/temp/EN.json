@@ -18,7 +18,30 @@
 		"header": "Photography"
 	},
 	"curriculum": {
-		"header": "Curriculum"
+		"header": "Curriculum",
+		"title": "Jeferson Osmeider Ruiz Cortes",
+		"subtitle": "Desarrollador Salesforce, Desarrollador Fullstack",
+		"profile": ["Parrafo 1", "Parrafo 2", "Parrafo 3"],
+		"workExperience": [
+			{
+				"company": "Company Name",
+				"position": "Position Name",
+				"startDate": "2018-01-01",
+				"endDate": "2018-12-31",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu",
+				"logoURL": "www.logo.com"
+			}
+		],
+		"education": [
+            {
+				"school": "School Name",
+                "degree": "Degree Name",
+                "startDate": "2018-01-01",
+                "endDate": "2018-12-31",
+				"logoURL": "www.logo.com"
+			}
+		]
+
 	},
 	"design_projects": {
 		"header": "Design Projects"
