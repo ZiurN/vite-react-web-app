@@ -15,9 +15,12 @@ function LanguageSelector () {
     if (menuOpened) showOptions();
   }, [clickOutsiteToggle]);
   const setLanguage = (language) => {
-    if (language === 'ES') setlanguageSelected(spainLogo);
-    if (language === 'EN') setlanguageSelected(englishLogo);
-    langCtx.setLanguage(language);
+    let currentLanguage = langCtx.lang;
+    if (language != currentLanguage) {
+      if (language === 'ES') setlanguageSelected(spainLogo);
+      if (language === 'EN') setlanguageSelected(englishLogo);
+      langCtx.setLanguage(language);
+    }
     showOptions();
   }
   const showOptions = () => {
