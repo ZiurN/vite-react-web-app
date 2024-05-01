@@ -1,7 +1,5 @@
 import { useRef, useEffect, useState, forwardRef, useImperativeHandle } from 'react'
-import { random } from 'canvas-sketch-util'
 import styles from '../styles/backGround.module.sass'
-import load from 'load-asset'
 
 const DynamicBackGround = forwardRef(function DynamicBackGround (props, ref) {
   const [screenSize, setScreenSize] = useState({ width: window.innerWidth, height: window.innerHeight });
