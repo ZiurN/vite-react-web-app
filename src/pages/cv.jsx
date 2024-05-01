@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { LangContext } from "../contexts/langContext";
+import { UiContext } from "../contexts/uiContext";
 import styles from '../styles/cv.module.sass';
 
-function Cv ({setPageTitle}) {
+function Cv () {
   const langCtx = useContext(LangContext);
+  const uICtx = useContext(UiContext);
   const pageContent = langCtx.content.curriculum;
+  uICtx.functions.setPageTitle(pageContent.header);
   let profile = pageContent.profile.map((item, index) => (
     <p className="" key={index}>
       {item}
@@ -34,7 +37,6 @@ function Cv ({setPageTitle}) {
       </div>
     </div>)
   );
-  setPageTitle(pageContent.header);
   return (
     <main className={`${styles.main}`} >
       <h1>{pageContent.title}</h1>

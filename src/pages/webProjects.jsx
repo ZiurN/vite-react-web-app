@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { LangContext } from "../contexts/langContext";
+import { UiContext } from "../contexts/uiContext";
 
-function WebProjects ({setPageTitle}) {
+function WebProjects () {
   const langCtx = useContext(LangContext);
+  const uICtx = useContext(UiContext);
   const pageContent = langCtx.content.web_projects;
-  setPageTitle(pageContent.header);
+  uICtx.functions.setPageTitle(pageContent.header);
   return (
     <div>Web Projects</div>
   );

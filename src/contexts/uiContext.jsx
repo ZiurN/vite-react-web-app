@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState, useEffect, useRef } from "react";
 import { Route, Routes, useLocation, Link, useNavigate, Navigate } from "react-router-dom";
 /** UI Custom Pages */
 import AboutMe from '../pages/aboutMe';
@@ -15,10 +15,26 @@ import ZiurLogo from '../components/ziurLogo';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import NavMenu from '../components/navMenu';
+import DynamicBackGround from '../components/dynamicBackGround';
 
 const UiContext = createContext();
 
 const UiContextProvider = ({ children }) => {
+  const [pageTitle, setTitle] = useState('Jeferson Ruiz');
+  const bgRef = useRef();
+  useEffect(() => {
+    let title = pageTitle;
+    title = title.length === 0 || title.includes("000")
+      ? "Jeferson Ruiz"
+      : title;
+    document.title = title;
+  },[pageTitle]);
+  const setPageTitle = (title) => {
+    setTimeout(() => {setTitle(title)}, 100);
+  }
+   const notifyPageHasChanged = () => {
+    bgRef.current.setAccelerationFromOutSide()
+  }
   const contextValue = {
     pages: {
       AboutMe,
@@ -28,14 +44,15 @@ const UiContextProvider = ({ children }) => {
       WebProjects,
       Home,
       Photography,
-	  Salesforce,
+      Salesforce,
       NotFound
     },
     components: {
       ZiurLogo,
       Header,
       Footer,
-      NavMenu
+      NavMenu,
+      DynamicBackGround
     },
     reactNavigate: {
       Route,
@@ -44,10 +61,18 @@ const UiContextProvider = ({ children }) => {
       Link,
       useNavigate,
       Navigate
+    },
+    functions: {
+      setPageTitle,
+      notifyPageHasChanged
+    },
+    properties: {
+      pageTitle
     }
   };
   return (
     <UiContext.Provider value={contextValue}>
+      <DynamicBackGround ref={bgRef}/>
       {children}
     </UiContext.Provider>
   );
